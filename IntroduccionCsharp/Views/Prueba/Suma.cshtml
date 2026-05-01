@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Suma";
+}
+
+<h2>Suma</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/Prueba/Suma" method="post">
+                <label for="Num1">Numero1: </label>
+                <input type="text" name="x" value="" />
+                <br />
+                <label for="Num2">Numero2: </label>
+                <input type="text" name="y" value="" />
+                <br />
+                <input type="submit" value="enviar" />
+                <label for="r1">Suma: </label>
+                <input type="radio" id="r1" name="r1" value="Suma" />
+                <label for="r2">Resta: </label>
+                <input type="radio" id="r1" name="r1" value="Resta" />
+            </form>
+        </div>
+        <div>
+            <br />
+            <h1>La suma es:</h1>
+            <h1>@ViewBag.res</h1>
+        </div>
+    </div>
+</div>
