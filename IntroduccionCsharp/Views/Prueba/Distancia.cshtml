@@ -1,0 +1,38 @@
+@model IntroduccionCsharp.Models.DistanciaPuntos
+
+@{
+    ViewBag.Title = "Distancia";
+}
+
+<h2>Distancia</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/Prueba/Distancia" method="post">
+                <label for="X1">X1: </label>
+                <input type="text" name="X1" value="@Model.X1" />
+                <br />
+
+                <label for="Y1">Y1: </label>
+                <input type="text" name="Y1" value="@Model.Y1" />
+                <br />
+
+                <label for="X2">X2: </label>
+                <input type="text" name="X2" value="@Model.X2" />
+                <br />
+
+                <label for="Y2">Y2: </label>
+                <input type="text" name="Y2" value="@Model.Y2" />
+                <br />
+
+                <input type="submit" value="Calcular" />
+            </form>
+        </div>
+
+        <div class="col-lg-10">
+            <br />
+            <h1>La distancia es: @Html.DisplayFor(model => model.Distancia)</h1>
+        </div>
+    </div>
+</div>
